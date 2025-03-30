@@ -87,9 +87,23 @@ const score = 200
 
  const userLoggedIn = true
  const debitCard = true
-//so for the writing the multiple condition like whatever conditon we write it will be true or flase  we use the (&&) and condition it will chek the both the conditon that 
+ const loggedInFromGoogle = false
+ const loggedInFromEmil = true
+//so for the writing the multiple condition like whatever conditon we write it will be true or flase  we use the (&&) and condition it will chek the both the conditon 
+
+//=> AND OPERATER(&&)
+
  if(userLoggedIn && debitCard) // here and(&&) perater will check the both right and left condition if that is true then it will execute the condtion so wher ever (&&) and operater will come both condition will be true if any any statement will be wong then it will not execute the conditon 
 {
     console.log("Allow to shopping ")
  }
  
+
+ //OR OPERATER(||)
+
+ ///so here we want that if user will loggin from eamil pr google i want to allow both of them so for that conditon or statement we use the  (||) OR operater
+
+ if (loggedInFromGoogle || loggedInFromEmil)//so here from the both conditon if any one will be true then it will allow to execute the statement 
+{
+    console.log("user loggen in")
+ }
