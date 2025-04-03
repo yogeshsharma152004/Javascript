@@ -74,10 +74,10 @@ for (let index = 0; index < myArray.length; index++) {
 
 for (let index = 1; index <= 20; index++) {
     if (index == 5) {
-        console.log(`detected 5`)
+        //console.log(`detected 5`)
         continue // sue it o here it will print the all value but where we put the condition it will not print that vlaue so here it will pritn that condition  value 
         
     }
-    console.log(`value of is a : ${index}`)
+    //console.log(`value of is a : ${index}`)
     
 }
