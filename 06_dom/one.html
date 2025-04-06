@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Dom learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM learning on chai aur code <span style="display: none;">test text </span></h1>
+        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing.</h2>
+        <h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+        </h2>
+        <h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+        </h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<!--
+//=> First methos is a get the element by id = document.getElementById('title')//id name can be whatever here we give the titleit will return that whole id value
+
+//=> for access the diffrent diffrent elemrets document.getElementById('title').id // it will return the id value we 
+access like othre element insted of the id in same way like class etc
+
+//=> In the DOM we dont access the class name by direct class for the we have to write the className // document.getElementById('title').className //this give the class name of the class
+
+//=> For the getting the attributs we can use the document.getElementById('title').getAttribute('id') //it will give the id name  //for class document.getElementById('title').getAttribute('class')
+
+//=> For the set the attribite we can use the document.getElementById('title').setAttribute('class', 'test heading') //so here we will change the value of the class
+-->
+
+<!--
+
+//=> We Can use the style elements in the dom 
+
+//=>title.style.backgroundColor = "green" //it will change the bg color of that element
+
+//=>title.style.padding = "15px"  // it will give the padding to the elements 
+
+//=>title.style.borderRadius = "15px" //give the border readius to the elements  
+
+-->
+
+<!--
+
+//Here like we want to access the content form the our id 
+
+//=> title.textContent it will give the text content  // text content means that it will give the whole value if somthing we hide from the css property it will give that // ex  is on the upper html code run it in the chrome 
+
+//=>title.innerHTML it will aldo give the same value as a text content // it will give the whole inner html value if we write the any html in the inner content then it will also give this // this tag will support html tags but if we want inner content or text then it will not support the html tags means it will give the html tags that are in the inner content // ex  is on the upper html code run it in the chrome 
+
+//=> title.innerText it will also give the same value as a textcontent and innerhtml //innertext means that it will shows only that value that is visible on the screen // ex  is on the upper html code run it in the chrome 
+-->
+
+<!--
+//some importent query selector that we will use in the mostly in the projects
+
+//=> we can write the quries direct using the queryselector
+
+//=>document.queryselector('h1') => it will give the first value that we give in the parameter it will give that so here we give the h2 from the web page 
+
+//=>document.querySelector('#title') => so it will will used to get the element by the id name 
+
+//=> document.querySelector('.heading')  => it will used to select the element by the class name 
+
+//=> document.querySelector('input[type="password"]') it will give the input value by using the type of the input
+-->
+
+<!--
+
+//=> querySelectorAll query selector will give the value in the node list so we can use the property like the foreach  
+//=> document.querySelectorAll('li') => so it will give the all the value of that element that we write in the parameter so here we write the li as a element so it will give the all the li elements present in the code it is diffrent from the queryselector in that it will give the only first value of that 
+
+//=>document.querySelectorAll('li') => so it will give the all the li element in the form of the nodelist but that is not the array 
+
+//=> nodelist and the htmlcollection is not the proper array but their some property are same as a array
+
+//=> htmlcollection is also diffrent from the nodelists in node list we use the values like foreach but in the htmlcollection we dont use that so for that we have to convert the htmlcollection into the array for that we use the Array.from() in the paranthisis we write the element that we want to convert into the array 
+-->
