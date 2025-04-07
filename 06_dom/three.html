@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body style="background-color: #212121; color:#fff;">
+    
+</body>
+
+<script>
+    //here we see that how we use the nodelist in the programs
+
+    //here we want to create the div element
+
+    const div =document.createElement('div')
+    console.log(div)
+    div.className = "main"
+    //div.id = "myId" we give like this id to element 
+    div.id =    Math.round(Math.random()*10 + 1)
+    div.setAttribute("tite" , "generated title") //is used to set the attributes in the element 
+    div.style.backgroundColor  = "green"
+    div.style.padding = "10px"
+    const addText = document.createTextNode("chai aur code ")//it will used to create the  text node for the element 
+     div.appendChild(addText) //it will append that value that child value 
+
+//like if we see all value  this it will not shown on the our live server it will shown on the our console only beacuse it will store in our memory for the diaplay that value on the server we use this method 
+
+document.body.appendChild(div) //so it will append that child on the our body 
+</script>
+</html>

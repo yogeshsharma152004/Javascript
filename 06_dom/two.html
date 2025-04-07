@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM  | Chai aur Code </title>
+</head>
+<body style="background-color: #212121; color:#fff;" >
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+
+
+//this is for the how we get the element from the parent to child element 
+
+  const parent =   document.querySelector('.parent')
+  console.log(parent)
+  console.log(parent.children) //it is give the children value in the htmlcollection 
+  console.log(parent.children[2].innerHTML)//it will  used to find the particuler child element from the parent element 
+
+  for (let i = 0; i < parent.children.length; i++) {
+    console.log(parent.children[i].innerHTML)  
+  }//here we use the for loop for the print the element it will give the all element values 
+
+  parent.children[1].style.color = "orange"//here we style the our particuler child from the parent child
+  console.log(parent.firstElementChild)//it will give the our first child element from tne our parent element 
+  console.log(parent.lastElementChild)//it will give the last child element form the parent element 
+
+
+  //=> this is for the how we get the childern to parent element 
+
+  const dayOne = document.querySelector('.day')
+  console.log(dayOne) //so here it will give the first value monday because we target that value 
+
+  //so here suppose we have already store the dayOne already in any variable and through we want to go to the parent so every time we dont want to write quetyselctor so we can write like this ]
+
+  console.log(dayOne.parentElement) // so this method through we can get the our parent element it will give the whole value that we store in the our parent element 
+
+  console.log(dayOne.nextElementSibling) //it will give the next element to that element that we select so here our element is a monday so it will give the exact next sibling element to after that is a tuesday
+
+  console.log("NODES :", parent.childNodes)//it will give the child nodes value that parent elelemt 
+</script>
+</html>
