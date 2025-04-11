@@ -33,7 +33,7 @@ form.addEventListener('submit' , function(e){
 
         results.innerHTML = `<span>${bmi} (${range})</span>`
 
-
+         
         
     }
 
