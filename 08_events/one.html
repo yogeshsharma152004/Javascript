@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+    
+</body>
+<script>
+ 
+     //first method is a write the onclick event inside the html code like onclick ()
+
+    //Second metod we can use this method but it will give the less feature in the compare of the eventlistener 
+    /*document.querySelector('#owl').onclick = function(){
+        alert('owl clicked') 
+    }*/
+
+   //third method using the event listenr
+
+
+  /* document.getElementById('owl').addEventListener('click' , function(e){
+    alert('owel is clicked')
+   })*/
+
+   //Event propogation ( in this have two method ) 
+   // (1) => EVENT BUBLLING :- the default false value is called as a event bubbling  
+   // (2) EVENT CAPTURING :- some time we need to use this method to caputre the event it is a true value 
+  
+   //here we will see that how can we stop the event propogation 
+
+   //1. = > EVENT BUBBLING  // it will bottom to up (from the inside to outside )
+
+   //here the code are the same but the target id is the diffrent so here we see that how the syntax will worked and which value will print on the which time that we will see
+
+    /*document.getElementById('images').  addEventListener('click' , function(e){
+    console.log("clicked inside the ul")
+   },false) */
+   //it will print that time you will click inside the images means inside the ul // if we click in any image it will print the console part 
+
+     //so here owl is a inside the ul so here ul will also activated because ul and inside the ul is li and inside the li we have images so when ever we click on the owl our upper code will also activated 
+
+   /*document.getElementById('owl').addEventListener('click' , function(e){
+      console.log("owl clicked ")
+      e.stopPropagation() // if we want that our event will not bubble and go to the outside value for that we use the stopPropagation method 
+   },false)*/ 
+   //it will print when you click on the specifficaly on the owl // if we click on this it will give the first owl clicked and then give the upper  value so this event propogation means th bublligam that means the buuble is a going down to up , so here we click first on the inner element that is a image then li and then ul 
+
+
+   //so in the simple language we can say that so whatever event or script track the big elements from inside to outside so that is called as a event propogation and it is called as a event bubbling 
+
+   //2.=> EVENT CAPTURING //it will going from the top to the bottom 
+
+
+   /*document.getElementById('images').  addEventListener('click' , function(e){
+      console.log("clicked inside the ul")
+   },true)*/
+
+
+   /*document.getElementById('owl').addEventListener('click' , function(e){
+      console.log("owl clicked ")
+   },true)  */
+   // so here if we click then it will give the ul value first then give the li  element value 
+
+   //preventDefault method 
+
+   //=> for example here we change the default behaviour of the google 
+
+
+   /*document.getElementById('google').addEventListener('click' , function(e){
+       e.preventDefault(); 
+       console.log("google clicked")
+   },false)*/
+
+    
+   //so here we want to make the one simple project that if i click on the any image then it will dissappear 
+
+
+   document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target.tagName);
+    //first method like if we use it like this then it will remove the whole li so that not happen for that we use the 
+    /*let removeIt = e.target.parentNode
+    removeIt.remove()*/
+
+    if (e.target.tagName === 'IMG'){
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+    }
+
+    // second method 
+
+    //removeIt.parentNode.removeChild(removeIt)
+    
+   })
+
+   
+
+</script>    
+</html>
