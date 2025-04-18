@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    //setTimeout method is a used for the execute any value aftet the  time we give and it will only execute that value once after that time 
+
+
+   /* setTimeout(function(){
+        console.log('yogesh')
+    },2000)*/ //we can write like this 
+
+    //THE BETTER WAY TO WRITE THE SETTIMEOUT 
+
+    const sayHello = function(){
+        console.log("Or bhai kya hal hai ");
+        
+    }
+   
+    const chnageText = function(){
+         document.querySelector('h1').innerHTML = "Best jS Series"
+    }
+
+   const change =  setTimeout(chnageText, 2000) //here we pass the refernce of the variable 
+
+    //if we want to stop timeout then we use the cleartimeout
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(change)
+        console.log("stop")
+    })
+
+
+</script>
+</html>

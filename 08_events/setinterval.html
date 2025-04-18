@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    //SETINTERVAL METHOD => it means that it will repetaltlly execute that value after the time we given for ex we give the 1 second so it will execute that value repetatily after that interval 
+
+    const sayDate = function(){
+    console.log("Yogesh" , Date.now())}
+
+    let intervalId;
+
+    document.querySelector('#start').addEventListener('click' , function(){
+        
+       intervalId = setInterval(sayDate,1000)
+     
+
+    })
+
+    document.querySelector('#stop').addEventListener('click',function(){
+      clearInterval(intervalId)
+    })
+    
+  
+    
+
+   
+
+    
+</script>
+</html>
