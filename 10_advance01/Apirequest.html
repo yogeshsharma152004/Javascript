@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+</body>
+<script>
+    //here we use the xml requset for the api request it is a old method we learn it for the just for the understanding it also called as a ajax request becuse it is ajax related 
+
+    const requsetUrl = 'https://api.github.com/users/yogeshsharma152004'
+
+    //for this we first make the objec using below method 
+    const xhr =  new  XMLHttpRequest()
+
+    //here the open will send the http reqeust it is available when we create the xmlhttp type request
+
+    xhr.open('GET' , requsetUrl)  //in this we have the two parameter method and the string (method means which type requst we want to send like get , post etc.. , string means the http link ) after that we have to call the open
+   
+    xhr.onreadystatechange = function(){
+
+         console.log(xhr.readyState) //to check the state value which we write in the body so her if we see the state value in the chrome consle it will give the 1 state for the continuesly track we chages its state 
+
+         if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)//it will convert the string into the json 
+             console.log(data.followers)
+         }
+
+    } // for the continuesly track we chages its state , onreadystate will take the  function fot the when the state that time what should i do for that it will take the function 
+
+    xhr.send() // here the open will call 
+</script>
+</html>
